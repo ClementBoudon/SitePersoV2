@@ -1,0 +1,4 @@
+AuthName "This is the law" 
+AuthUserFile /home/clementb/www/v2/.htpasswd 
+AuthType Basic
+Require valid-user
