@@ -1,0 +1,65 @@
+/*
+Responsive
+ */
+@media screen and (max-width: 1024px) {
+	
+	#resume {
+			width: 70%;
+			font-size: 1.15em;
+
+		}
+		/* passage de l'xp sous descriptif */
+	.experience .description{
+		
+		width: 90%;
+			padding: 5% 0;
+	}
+
+	.experience ul.competence {
+		width: 90%;
+			
+			padding: 2% 0;
+	}
+
+	
+
+}
+@media screen and (max-width: 640px) {
+	body{
+		font-size: 12px;
+	}
+	
+	#resume {
+			width: 80%;
+			font-size: 1.1em;
+		}
+
+	#competences ul{
+		width: 90%;
+		padding-top: 5%;
+	}
+	
+	
+	.formation{
+
+		padding-top: 5%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	body{
+		font-size: 11px;
+	}
+	ul.niv1 li {
+		width: 100%;
+			float: none;
+			margin-bottom: 10%;
+			font-size: 1.2em;;
+	}
+
+	ul.niv2 li{
+		margin-bottom: 5%;
+			font-size: 1em;;
+	}
+
+}
