@@ -131,7 +131,7 @@
 
 		
 		ul.nav1 > li:hover a{
-			padding-bottom: 0;
+			
 			border-bottom: none;
 		}
 
@@ -143,12 +143,14 @@
 		ul.nav1 li:hover .niv2{
 			visibility:visible;
 			opacity:1;
+			height: auto;
 			transition-delay:0s;
 		}
 		
 		.niv2{
 			visibility:hidden;
   			opacity:0;
+  			height: 0;
 			transition:visibility 0s linear 0.5s,opacity 0.5s linear;
 			margin-top: 8%;
 			
@@ -174,7 +176,7 @@
 		 */
 
 		#resume{
-			width: 47%;
+			width: 50%;
 			margin-left: auto;
 			margin-right: auto;
 			margin-top: 0.5%;
@@ -313,22 +315,15 @@
 		/*
 		Responsive
 		 */
-		@media screen and (max-width: 640px) {
-			body{
-				font-size: 12px;
-			}
-			ul.nav1 li {
-				width: 100%;
-	  			float: none;
-	  			margin-bottom: 10%;
-			}
-
+		@media screen and (max-width: 1024px) {
+			
 			#resume {
-  				width: 80%;
-  				font-size: 1.1em;
-  			}
+  				width: 70%;
+  				font-size: 1.15em;
 
-  			.experience .description{
+  			}
+  			/* passage de l'xp sous descriptif */
+			.experience .description{
 				
 				width: 90%;
 	  			padding: 5% 0;
@@ -337,16 +332,42 @@
 			.experience ul.competence {
 				width: 90%;
 	  			
-	  			padding: 5% 0;
+	  			padding: 2% 0;
+			}
+
+			
+
+		}
+		@media screen and (max-width: 640px) {
+			body{
+				font-size: 12px;
 			}
 			
+			#resume {
+  				width: 80%;
+  				font-size: 1.1em;
+  			}
+
 			#competences ul{
 				width: 90%;
 				padding-top: 5%;
 			}
 			
+			
 			.formation{
 		
 				padding-top: 5%;
 			}
+		}
+
+		@media screen and (max-width: 500px) {
+			body{
+				font-size: 11px;
+			}
+			ul.nav1 li {
+				width: 100%;
+	  			float: none;
+	  			margin-bottom: 10%;
+			}
+
 		}
