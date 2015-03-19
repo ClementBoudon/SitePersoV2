@@ -10,6 +10,7 @@
 	<script>
 		// Gestion des blocs (en VanillaJS)
 		var block_affiche = 'experiences';
+		var last_top = '0';
 		document.addEventListener('DOMContentLoaded', function() {
 			
 			//on cache tous les blocks
@@ -32,7 +33,7 @@
 			block_affiche = nom_contenu;
 
 			/*window.location.hash=nom_contenu;*/
-			animate(document.body, "scrollTop", "", 0, document.getElementById("nav").offsetTop, 500, true);
+			animate(document.body, "scrollTop", "", last_top, document.getElementById("nav").offsetTop, 500, true);
 			
 		}
 
@@ -47,6 +48,7 @@
 		                elem.style[style] = (from+step*(to-from))+unit;
 		            }
 		            if( step == 1) clearInterval(timer);
+		            last_top = to;
 		        },25);
 		    elem.style[style] = from+unit;
 		}
