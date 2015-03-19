@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Clément Boudon</title>
+	<!-- build:css inline -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- /build -->
+	<script>
+		// Gestion des blocs (en VanillaJS)
+		var block_affiche = 'experiences';
+		document.addEventListener('DOMContentLoaded', function() {
+			
+			//on cache tous les blocks
+			document.getElementById('experiences').style.display = "none";
+			document.getElementById('competences').style.display = "none";
+			document.getElementById('formations').style.display = "none";
+			
+			//on récupere l'ancre de l'url (si renseignée)
+			anchor = window.location.hash;
+			anchor = anchor.substring(1,anchor.length); // enleve le #
+			if (anchor !== ''){
+				show_contenu(anchor);
+			}	
+		});
+
+		function show_contenu(nom_contenu){
+
+			document.getElementById(block_affiche).style.display = "none";
+			document.getElementById(nom_contenu).style.display = "block";
+			block_affiche = nom_contenu;
+
+			/*window.location.hash=nom_contenu;*/
+			animate(document.body, "scrollTop", "", 0, document.getElementById("nav").offsetTop, 500, true);
+			
+		}
+
+		function animate(elem,style,unit,from,to,time,prop) {
+		    if( !elem) return;
+		    var start = new Date().getTime(),
+		        timer = setInterval(function() {
+		            var step = Math.min(1,(new Date().getTime()-start)/time);
+		            if (prop) {
+		                elem[style] = (from+step*(to-from))+unit;
+		            } else {
+		                elem.style[style] = (from+step*(to-from))+unit;
+		            }
+		            if( step == 1) clearInterval(timer);
+		        },25);
+		    elem.style[style] = from+unit;
+		}
+
+	</script>
+</head>
+<body>
+	<h1><a href="index.html">Cl&eacute;ment Boudon</a></h1>
+	<h2>Business &amp; Operation Manager</h2>
+	<section id="resume">
+		<h3>TL;DR</h3>
+		<p>Après l’obtention d’un diplôme en génie logiciel spécialité Web en 2007, j’ai commencé mon parcours professionnel en tant que <strong>développeur PHP</strong>, pour évoluer au fil des années et des projets vers un rôle de <strong>responsable</strong> puis <strong>directeur technique</strong>, et enfin <strong>Business et Operation Manager</strong> au sein de la société Interact-iv.com Lux, poste que j'occupe depuis août 2013.</p>
+		<p>Bien qu’ayant à l’origine <strong>un profil technique</strong> (développement web Backend / Frontend, modélisation et gestion de données, hosting, …), j’ai eu l’opportunité de faire évoluer mes compétences vers <strong>un aspect managerial</strong>, avec une forte montée en compétence sur les processus de <strong>Business Managment</strong> ces dernières années (projection, budgetisation, organisation, missionnement, direction, contrôle et amélioration), tout en continuant à effectuer une veille technologique et culturelle quotidienne.
+		</p>
+	</section>
+	<nav id="nav" class="nav_cv">
+		<ul class="niv1">
+		 	<li>
+		 		<a href="#experiences" onclick="show_contenu('experiences'); return false;">Exp&eacute;riences</a>
+		 	</li>
+		 	<li>
+		 		<a href="#competences" onclick="show_contenu('competences'); return false;">Comp&eacute;tences</a>	 		
+		 	</li>
+		 	<li>
+		 		<a href="#formations" onclick="show_contenu('formations'); return false;">Formation</a>
+		 	</li>
+		</ul>
+	</nav>
+	<section id="experiences" class="contenu">
+		<section class="experience">
+			<section class="poste">Business & Operation Manager</section>
+			<section class="societe"><a href="http://www.interact-iv.com">Interact-IV.com LUX S.A.</a></section>
+			<section class="date">Août 2013 - Aujourd'hui</section>
+			<section class="taille">
+				Équipe de 5 - 10 personnes, Groupe Interact-IV.com 50 personnes.
+			</section>
+			<section class="description">
+				<p>J’ai intégré Interact-IV.com Lux, filiale du groupe Interact-IV.com, suite à mes expériences passées dans la gestion technique et commerciale de plateformes de monétisation, afin de mettre en place et développer les produits <a href="http://www.mu-payment.com">MU Payment</a>, nouvelle plateforme de micro-paiement, et <a href="http://www.promovox.com">Promovox</a>, solution de publicité vocale par téléphone.</p>
+				<p>En plus des aspects de <strong>Business Managment</strong> (sales et pre-sales, delivery, support, adv), j’ai également en charge l’<strong>Operation Management</strong> (planification et suivi de la production et des développements, R&D associée).</p>
+				<p>En complément je suis également <strong>administrateur</strong> de la société, gérant une partie des aspects administratifs et RH.</p>
+			</section>
+			<ul class="competence">
+				<li><strong>Business Managment</strong></li>
+				<li><strong>Commercialisation</strong></li>
+				<li><strong>Pilotage technique</strong></li>
+				<li><strong>Haute disponibilité</strong></li>
+				<li>Partenariats</li>
+				<li>Support</li>
+				<li>Télécommunications</li>
+				<li>PHP5 ZF2</li>
+				<li>Continuous delivery</li>
+				<li>GIT</li>
+				<li>MySQL</li>
+				<li>Frontend</li>
+				<li>Linux</li>
+			</ul>
+			<div class="clear"></div>
+		</section>
+
+		<section class="experience">
+			<section class="poste">Directeur Technique Monétisation</section>
+			<section class="societe">Absolu Telecom</section>
+			<section class="date">Juin 2011 - Juillet 2013</section>
+			<section class="taille">
+				Équipe de 5 - 10 personnes.
+			</section>
+			<section class="description">
+				<p>Mon rôle au sein d'Absolu Telecom était de <strong>concevoir, développer, assurer la mise en production et le suivi technique</strong> de l'ensemble des produits proposés par la solution de paiement Absolu Payment, à travers notamment l’intégration régulière de nouveaux modes de paiements, français comme internationaux. Je pilotais aussi le département <strong>Recherche et Développement</strong>, étudiant et concevant de nouveaux modes de monétisation.</p>
+			</section>
+			<ul class="competence">
+				<li><strong>Pilotage technique</strong></li>
+				<li><strong>Continuous delivery</strong></li>
+				<li><strong>Commercialisation</strong></li>
+				<li><strong>Haute disponibilité</strong></li>
+				<li><strong>Partenariats</strong></li>
+				<li><strong>GIT</strong></li>
+				<li>Support</li>
+				<li>Télécommunications</li>
+				<li>PHP5</li>
+				<li>HTML5</li>
+				<li>CSS3</li>
+				<li>MySQL</li>
+				<li>Linux</li>
+			</ul>
+			<div class="clear"></div>
+		</section>
+
+		<section class="experience">
+			<section class="poste">Responsable R&D division monétisation</section>
+			<section class="societe">Absolu Network France</section>
+			<section class="date">2010 - Mai 2011</section>
+			<section class="taille">
+				Équipe de 5 - 10 personnes.
+			</section>
+			<section class="description">
+				<p>Dans la continuité du développement de la plateforme de paiement lors mon poste précédent, j’ai hérité du rôle de <strong>responsable technique</strong> de cette plateforme au sein de la nouvelle structure Absolu Network France. Nommée Absolu Payment, cette solution de micro-paiement et de mise en relation surtaxé était la première plateforme proposant une solution de paiement par appel et sms surtaxé sans saisie de code ou de ticket.</p>
+				<p>Ce poste incluait le <strong>développement Backend en PHP5</strong> de la solution, l’intégration régulière de nouveaux modes de paiements, le <strong>suivi des prestataires</strong>, l’<strong>account managment</strong> et le <strong>support de niveau 3</strong>. J’ai également effectué un <strong>accompagnement des équipes commerciales</strong> en représentation (Salon Paris e-commerce 2010, Mobile World Congress Barcelone 2010, AdTech SanFrancisco 2010, …).</p>
+			</section>
+			<ul class="competence">
+				<li><strong>PHP5</strong></li>
+				<li><strong>MySQL</strong></li>
+				<li>HTML5</li>
+				<li>CSS3</li>
+				<li>Linux</li>
+				<li>Haute disponibilité</li>
+				<li>Commercialisation</li>
+				<li>Partenariats</li>
+				<li>Support</li>
+				<li>Télécommunications</li>
+			</ul>
+			<div class="clear"></div>
+		</section>
+
+		<section class="experience">
+			<section class="poste">Developpeur Web</section>
+			<section class="societe">Starting Prod</section>
+			<section class="date">Avril 2007 - 2010</section>
+			<section class="taille">
+				Équipe de 5 - 10 personnes.
+			</section>
+			<section class="description">
+				<p>Dans la continuité de mon stage de fin d’étude, j’ai été engagé en tant que <strong>développeur web PHP</strong> : création, maintenance, administration de sites et services Web édités par Starting prod. Ceci incluait notamment la gestion et maintenance du site Internet Bushi, site de jeux flash, avec entre autre la <strong>coordination de l’équipe de production</strong> des jeux. C’est dans ce cadre que j’ai eu en charge la création d’une plate-forme de micro-paiement interne utilisée par ce site.</p>
+			</section>
+			<ul class="competence">
+				<li><strong>PHP5</strong></li>
+				<li><strong>MySQL</strong></li>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>Linux</li>
+			</ul>
+			<div class="clear"></div>
+		</section>
+
+		<section class="experience">
+			<section class="poste">Stagiaire Développement Web</section>
+			<section class="societe">Elite SA</section>
+			<section class="date">Mai 2006 - Juillet 2006</section>
+			<section class="taille">
+				Équipe de 1 - 5 personnes.
+			</section>
+			<section class="description">
+				<p>Lors de ce premier stage en entreprise en tant que <strong>développeur web</strong>, ma mission a été de mettre en place un nouveau site Internet pour la société, en <strong>automatisant la mise à jour</strong> de la base de données du site Internet depuis celle de production de l’usine.
+				<p>J'ai aussi eu à <strong>organiser et structurer le réseau informatique</strong> interne de l'entreprise, et apporter mes compétences en conseil informatique sur l'évaluation du budget IT de l’entreprise.</p>
+			</section>
+			<ul class="competence">
+				<li><strong>PHP</strong></li>
+				<li><strong>MySQL</strong></li>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>Linux</li>
+				<li>Windows Server</li>
+			</ul>
+			<div class="clear"></div>
+		</section>
+	</section>
+
+	<section id="competences" class="contenu">
+		<ul>
+			Maitrisée :
+			<li>Direction et pilotage technique</li>
+			<li>Business Managment</li>
+			<li>Operation Managment</li>
+			<li>Commercialisation</li>
+			<li>Support - Account Managment</li>
+			<li>Télécommunications</li>
+		</ul>
+		<ul>
+			Déployée en production :
+			<li>PHP OO (MVC, <a href="http://framework.zend.com/">ZendFramework 2</a>)</li>
+			<li>API Restfull</li>
+			<li>Architecture BDD <a href="http://www.mysql.com/">MySQL</a></li>
+			<li>Frontend : HTML5 / CSS3 / <a href="http://getbootstrap.com/">Frameworks</a></li>
+			<li>Preprocesseur CSS <a href="http://lesscss.org/">less / <a href="http://sass-lang.com/">Sass</a>-<a href="http://compass-style.org/">Compass</a></li>
+			<li>Automatisation <a href="http://gruntjs.com/">Grunt</a></li>
+			<li>Framework JS <a href="https://angularjs.org/">AngularJS</a></li>
+			<li><a href="http://bower.io/">Bower</a></li>
+			<li>Hosting LAMP</li>
+			<li><a href="http://git-scm.com">GIT</a> (<a href="https://github.com/ClementBoudon">Github</a>) / SVN</li>
+			<li>Continuous delivery</li>
+			<li>Task managment (via <a href="https://redbooth.com">Redbooth</a> & <a href="https://www.toggl.com">Toggl</a>)</li>
+		</ul>
+		<ul>
+			Étudiée : 
+			<li>NoSQL (<a href="https://www.mongodb.org/">MongoDB, <a href="http://redis.io/">Redis)</li>
+			<li>Hosting cloud (<a href="http://aws.amazon.com/">AWS, <a href="https://www.heroku.com/">Heroku</a>)</li>
+			<li><a href="https://codeship.com/">Codeship</a></li>
+			<li>Développement pour mobile (<a href="http://phonegap.com/">Phonegap</a> / <a href="https://cordova.apache.org/">Cordova</a> / <a href="http://ionicframework.com/">ionic framework</a>)</li>
+			<li><a href="http://nvie.com/posts/a-successful-git-branching-model/">Gitflow</a></li>
+			<li>Méthodes agiles Scrum</li>
+		</ul>
+		<div class="clear"></div>
+	</section>
+
+	<section id="formations" class="contenu">
+		<section class="formation">
+			<section class="diplome">Licence Pro METINET - Métiers du Net</section>
+			<section class="ecole">Université Lyon 1 Claude Bernard, Bourg En Bresse</section>
+			<section class="date">Septembre 2006 - Juin 2007</section>
+			<section class="description">
+				<p>Développement Web Backend Objet, développement web Frontend, Gestion de projet, Webmarketing, droit.</p>
+			</section>
+		</section>
+
+		<section class="formation">
+			<section class="diplome">DUT Génie logiciel</section>
+			<section class="ecole">Université Lyon 1 Claude Bernard, Bourg En Bresse</section>
+			<section class="date">Septembre 2004 - Juin 2006</section>
+			<section class="description">
+				<p>Développement logiciel, algorithmique, Gestion de projet, commerce, marketing.</p>
+			</section>
+		</section>
+	</section>
+	 
+</body>
+</html>

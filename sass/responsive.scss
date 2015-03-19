@@ -12,15 +12,16 @@ Responsive
 	.experience .description{
 		
 		width: 90%;
-			padding: 5% 0;
+			padding: 2% 0 2% 0;
 	}
 
 	.experience ul.competence {
 		width: 90%;
 			
-			padding: 2% 0;
+			padding: 0 0 2% 0;
 	}
-
+	
+	
 	
 
 }
@@ -39,6 +40,9 @@ Responsive
 		padding-top: 5%;
 	}
 	
+	.contenu {
+		padding-top: 0;
+	}	
 	
 	.formation{
 
@@ -59,7 +63,19 @@ Responsive
 
 	ul.niv2 li{
 		margin-bottom: 5%;
-			font-size: 1em;;
+		font-size: 1em;;
+	}
+	/* Pour la page CV on reste avec un menu inline */
+	.nav_cv ul.niv1 li {
+		width: 33%;
+		float: left;
 	}
 
+	#resume {
+  		width: 92%;
+  	}
+	.contenu {
+  		width: 92%;
+  		margin: 10% 2%;
+  	}
 }
