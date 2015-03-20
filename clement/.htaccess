@@ -1,0 +1,10 @@
+AuthName "This is the law" 
+AuthUserFile /home/repasdesod/boudon.com/clement/.htpasswd 
+AuthType Basic
+Require valid-user
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^www\.clement\.boudon\.com [NC]
+RewriteRule ^(.*)$ http://clement.boudon.com/ [L,R=301]
+
