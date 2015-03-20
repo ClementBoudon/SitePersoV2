@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="description" content="Site web personnel de Cl&eacute;ment Boudon : Contact et CV.">
-	<title>Cl&eacute;ment Boudon</title>
-	
-	<!-- build:css inline -->
-	<link rel="stylesheet" href="../css/style.css">
-	<!-- /build -->
-	
+	<title>Cl&eacute;ment Boudon - Contact</title>
+
+	<!-- OpenGraph infos (optionnal og:site_name) -->
+	<meta property="og:title" content="Clement Boudon - Contact" />
+	<meta property="og:site_name" content="Clement Boudon" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://clement.boudon.com" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:description" content="Site web personnel de Clément Boudon : Contact et CV." />
+	<meta property="og:image" content="http://clement.boudon.com/img/portrait-clement-boudon-500x500.jpg" />
+	<!-- /OpenGraph -->
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@ClementBoudon">
+	<meta name="twitter:creator" content="@ClementBoudon" />
+	<meta name="twitter:title" content="Clement Boudon - Contact">
+	<meta name="twitter:description" content="Site web personnel de Clément Boudon : Contact et CV.">
+	<meta name="twitter:image:src" content="http://clement.boudon.com/img/portrait-clement-boudon-500x500.jpg">
+	<!-- /Twitter Card -->
+
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -30,46 +45,62 @@
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	<meta name="theme-color" content="#f5f5f3">
 	<!-- /favicon -->
+
+	<!-- build:css inline -->
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- /build -->
+	
 </head>
-<body>
-	<img id="profile" src="img/portrait-clement-boudon-180x180.jpg" alt="Clément Boudon">
-	<h1>Cl&eacute;ment Boudon</h1>
-	<h2>Business &amp; Operation Manager<br>chez <a href="http://www.interact-iv.com/">Interact-iv.com</a></h2>
+<body itemscope itemtype="http://data-vocabulary.org/Person">
+	<link itemprop="url" href="http://clement.boudon.com">
+	<img itemprop="image" id="profile" src="http://clement.boudon.com/img/portrait-clement-boudon-180x180.jpg" alt="Clément Boudon">
+	<h1 itemprop="name">Cl&eacute;ment Boudon</h1>
+	<h2>
+		<span itemprop="jobTitle">Business &amp; Operation Manager</span><br>
+		chez 
+		<span  itemprop="affiliation" itemscope itemtype="http://schema.org/Organization">
+			<a itemprop="url" href="http://www.interact-iv.com/">
+				<span itemprop="name">Interact-iv.com Lux</span>
+			</a>
+		</span>
+	</h2>
 	<h3>(also doing stuff online)</h3>
-	
-	
 	<ul class="niv1">
 	 	<li>
 	 		<a href="#">Contact</a>
 	 		<ul class="niv2">
-	 			<li>
+	 			<li itemprop="email">
 					<script>
-					document.write("<a href='" + "mail" + "to:" + "clement" + "@" + "boudon.com" + "'>" + "clement" + "@" + "boudon.com" + "</a>");
+						document.write("<a href='" + "mail" + "to:" + "clement" + "@" + "boudon.com" + "'>" + "clement" + "@" + "boudon.com" + "</a>");
 					</script>
 				</li>
-				<li><a href="tel:00352661798795">+352 661 798 795</a></li>
-				<li>17 rue Helen Buchholtz, L-4048 Esch/Alzette, Luxembourg</li>
+				<li><a href="tel:00352661798795"><span itemprop="telephone">+352 661 798 795</span></a></li>
+				<li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<span itemprop="streetAddress">17 rue Helen Buchholtz</span>, 
+					<span itemprop="postalCode">L-4048</span> 
+					<span itemprop="addressLocality">Esch/Alzette</span>, 
+					<span itemprop="addressCountry">LU</span>
+				</li>
 	 			<li><a href="skype:clement.boudon?call">Skype : clement.boudon</a></li>
 	 		</ul>
 	 	</li>
 	 	<li>
 	 		<a href="#">Pro</a>
 	 		<ul class="niv2">
-	 			<li><a href="http://fr.linkedin.com/pub/clement-boudon/15/91a/261">LinkedIn</a></li>
-	 			<li><a href="https://github.com/ClementBoudon ">Github</a></li>
-	 			<li><a href="http://www.viadeo.com/fr/profile/clement.boudon">Viadeo</a></li>
+	 			<li><a itemprop="sameAs" href="http://fr.linkedin.com/pub/clement-boudon/15/91a/261">LinkedIn</a></li>
+	 			<li><a itemprop="sameAs" href="https://github.com/ClementBoudon ">Github</a></li>
+	 			<li><a itemprop="sameAs" href="http://www.viadeo.com/fr/profile/clement.boudon">Viadeo</a></li>
 	 			<li><a href="cv" class="download">CV</a></li>
 	 		</ul>
 	 	</li>
 	 	<li>
 	 		<a href="#">Un peu moins pro</a>
 	 		<ul class="niv2">
-	 			<li><a href="http://twitter.com/clementboudon">Twitter</a></li>
-	 			<li><a href="http://www.facebook.com/clementboudon">Facebook</a></li>
-	 			<li><a href="https://plus.google.com/+ClementBoudon ">Google +</a></li>
+	 			<li><a itemprop="sameAs" href="http://twitter.com/clementboudon">Twitter</a></li>
+	 			<li><a itemprop="sameAs" href="http://www.facebook.com/clementboudon">Facebook</a></li>
+	 			<li><a itemprop="sameAs" href="https://plus.google.com/+ClementBoudon ">Google +</a></li>
 	 		</ul>
 	 	</li>
 	 </ul>
-	 
 </body>
 </html>
