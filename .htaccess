@@ -1,8 +1,0 @@
-AuthName "This is the law" 
-#AuthUserFile /var/www/.htpasswd 
-AuthUserFile /home/clementb/www/v2/.htpasswd 
-AuthType Basic
-Require valid-user
-
-RewriteEngine on
-RewriteRule ^cv$ /cv.html [QSA,L]
