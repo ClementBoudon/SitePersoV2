@@ -12,21 +12,21 @@ module.exports = function(grunt) {
     },
     concat_css: {
       all: {
-        src: ["public/css/reset.css","public/css/main.css","public/css/cv.css","public/css/responsive.css"],
-        dest: "public/css/style.css"
+        src: ["src/css/reset.css","src/css/main.css","src/css/cv.css","src/css/responsive.css"],
+        dest: "src/css/style.css"
       },
     },
     processhtml: {
       all: {
         files: {
-          'public/index.html': ['public/src_index.html'],
-          'public/cv.html': ['public/src_cv.html']
+          'clement/index.html': ['src/html/index.html'],
+          'clement/cv.html': ['src/html/cv.html']
         }
       }
     },
     watch: {
       scripts: {
-        files: ['sass/*','public/src_*'],
+        files: ['src/sass/*','src/html/*'],
         tasks: ['default'],
       }
     }
