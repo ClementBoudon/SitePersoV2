@@ -1,39 +1,15 @@
 /*
 	CSS SitePersoV2
+*/
+@import "base";
 
- */
 body{
-	background-color: #F5F5F3;
-	color: #1f2325;
-	text-align: center;
-	
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	/* 
-		font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
-		font-family: 'AGaramondProRegular', 'Times New Roman';	 
-	*/
-
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	
-	
+	@include font-smoothing(antialiased);
 	font-size: 16px;
-
-	
-
-	/*
-	
-	letter-spacing: .01rem;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 22px;
-	line-height: 1.5;
-	 */
-	/*
-	font-size: 24px;
-	  line-height: 36px;
-	  color: #1f2325;
-	 */
+	background-color:  $background-color;
+	color: $font-color;
+	text-align: center;
 }
 strong{
 	font-weight: bold;
@@ -51,66 +27,51 @@ h3{
 	font-style: italic;
 	font-size: 1.5em;
 	padding: 0.5% 0 1% 0;
-
 }
-
-
 li {
 	list-style-type: none;
 }
 a, a:link, a:visited{
-	color: #696969;
+	color: $link-color;
 	text-decoration: none;
 }
-
 h1 a, h1 a:link{
-	color: #000000;
+	color: $font-color;
 }
-
 ul.niv1{
 	display: block;
 	width: 100%;
 	padding-top: 4%;
 }
-
 ul.niv1 > li a{
-	color: #000000;
+	color: $font-color;
 	padding-bottom: 3%;
-	border-bottom: #1f2325 solid 1px;
+	border-bottom: $font-color solid 1px;
 	font-weight: bold;
-	/* cursor: default; */
 }
-
-
 ul.niv1 > li:hover a{
-	
 	border-bottom: none;
 }
-
 ul.niv1 li {
 	width: 33%;
-		float: left;
+	float: left;
 }
-
 ul.niv1 li:hover .niv2{
 	visibility:visible;
 	opacity:1;
 	height: auto;
-	transition-delay:0s;
+	@include transition-delay(0s);
 }
-
 .niv2{
 	visibility:hidden;
-		opacity:0;
-		height: 0;
-	transition:visibility 0s linear 0.5s,opacity 0.5s linear;
-	margin-top: 8%;
-	
+	opacity:0;
+	height: 0;
+	@include transition(visibility 0s linear 0.5s, opacity 0.5s linear);
+	margin-top: 8%;	
 }
-
 ul.niv2 li{
-	  width: 100%;
-	  margin-top: 2%;
+	width: 100%;
+	margin-top: 2%;
 }
 ul.niv2 li a{
 	cursor: pointer;
@@ -118,18 +79,13 @@ ul.niv2 li a{
 	border-bottom: none;
 	font-weight: normal;
 }
-
 a.download{
 	font-style: italic;
 }
-
 #profile {
- /*  background-image: url(img/portrait-clement-boudon-180x180.jpg); */
-  max-width: 180px;
-  height:auto;
-  width: 30%;
-  /* height: 30%; */
-  margin: 2% auto 0 auto;
-  
-  border-radius: 50%;
+	max-width: 180px;
+	height:auto;
+	width: 30%;
+	margin: 2% auto 0 auto;
+	@include border-radius(50%);
 }
