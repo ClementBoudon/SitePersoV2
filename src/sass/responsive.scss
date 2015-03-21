@@ -72,6 +72,7 @@ Responsive
 		float: none; */
 		margin-bottom: 10%;
 		font-size: 1.1em;
+		height: 1.5em;
 	}
 	ul.niv2{
 		//height: 0; /*Car utilisation de visibility*/
@@ -82,6 +83,13 @@ Responsive
 	    width: 300%;
 	    padding-top: 20%;
 	    font-size: 1.2em;
+	    z-index: 1;
+	    height: 0;
+	}
+
+	ul.niv1 li:hover .niv2{
+		z-index: 999;
+		height: auto;
 	}
 
 	ul.niv1 li #niv2_pro{
