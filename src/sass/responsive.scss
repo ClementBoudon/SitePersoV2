@@ -33,9 +33,9 @@ Responsive
 	}
 	
 	#resume {
-			width: 80%;
-			font-size: 1.1em;
-		}
+		width: 80%;
+		font-size: 1.1em;
+	}
 
 	#competences ul{
 		width: 90%;
@@ -47,8 +47,10 @@ Responsive
 	}	
 	
 	.formation{
-
 		padding-top: 5%;
+	}
+	ul.niv2 li{
+		padding-bottom: 1%;
 	}
 }
 
@@ -56,13 +58,40 @@ Responsive
 	body{
 		font-size: 11px;
 	}
+	#profile{
+		max-width: 75px
+	}
+	h1{
+		font-size: 2.5em;
+	}
+	ul.niv1 {
+		padding-top: 6%;
+	}
 	ul.niv1 li {
-		width: 100%;
-			float: none;
-			margin-bottom: 10%;
-			font-size: 1.2em;;
+		/* width: 100%;
+		float: none; */
+		margin-bottom: 10%;
+		font-size: 1.1em;
+	}
+	ul.niv2{
+		//height: 0; /*Car utilisation de visibility*/
+		//@include transition(visibility 0s linear 0s, opacity 0s linear);
+	}
+	ul.niv1 li .niv2{
+		//height: auto;
+	    width: 300%;
+	    padding-top: 20%;
+	    font-size: 1.2em;
 	}
 
+	ul.niv1 li #niv2_pro{
+		position: relative;
+		left: -100%;
+	}
+	ul.niv1 li #niv2_perso{
+		position: relative;
+		left: -200%;
+	}
 	ul.niv2 li{
 		margin-bottom: 5%;
 		font-size: 1em;;
