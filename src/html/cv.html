@@ -56,6 +56,8 @@
 		// Gestion des blocs (en VanillaJS)
 		var block_affiche = 'experiences';
 		var last_top = '0';
+		var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+		
 		document.addEventListener('DOMContentLoaded', function() {
 			
 			//on cache tous les blocks
@@ -77,25 +79,26 @@
 			document.getElementById(nom_contenu).style.display = "block";
 			block_affiche = nom_contenu;
 
-			/*window.location.hash=nom_contenu;*/
-			animate(document.body, "scrollTop", "", last_top, document.getElementById("nav").offsetTop, 500, true);
+			if(window.chrome){
+				animate( last_top, document.getElementById("nav").offsetTop);
+			}else{
+				window.location.hash="nav";
+			}
 			
 		}
 
-		function animate(elem,style,unit,from,to,time,prop) {
-		    if( !elem) return;
+		function animate(from,to) {
+
 		    var start = new Date().getTime(),
 		        timer = setInterval(function() {
-		            var step = Math.min(1,(new Date().getTime()-start)/time);
-		            if (prop) {
-		                elem[style] = (from+step*(to-from))+unit;
-		            } else {
-		                elem.style[style] = (from+step*(to-from))+unit;
-		            }
+		            var step = Math.min(1,(new Date().getTime()-start)/500);
+		            //document.body["scrollTop"] = (from+step*(to-from))+"";
+		            document.body.scrollTop = (from+step*(to-from))+"";
 		            if( step == 1) clearInterval(timer);
 		            last_top = to;
 		        },25);
-		    elem.style[style] = from+unit;
+		    //document.body.style["scrollTop"] = from+"";
+		    document.body.scrollTop = from+"";
 		}
 
 	</script>
