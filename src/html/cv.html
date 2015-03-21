@@ -79,7 +79,7 @@
 			document.getElementById(nom_contenu).style.display = "block";
 			block_affiche = nom_contenu;
 
-			if(window.chrome){
+			if(is_chrome){
 				animate( last_top, document.getElementById("nav").offsetTop);
 			}else{
 				window.location.hash="nav";
