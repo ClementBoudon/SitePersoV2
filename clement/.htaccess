@@ -8,6 +8,9 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www\.clement\.boudon\.com [NC]
 RewriteRule ^(.*)$ http://clement.boudon.com/ [L,R=301]
 
+RewriteRule ^cv.php$ /cv [QSA,L,R=301]
+RewriteRule ^cv_html/cv.html$ /cv [QSA,L,R=301]
+RewriteRule ^documents/(.+).doc$ /cv [QSA,L,R=301]
 
 # compress text, html, javascript, css, xml:
 AddOutputFilterByType DEFLATE text/plain
