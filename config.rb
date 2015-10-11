@@ -4,8 +4,8 @@
 http_path = "/clement"
 css_dir = "/src/css"
 sass_dir = "/src/sass"
-images_dir = "/clement/img"
-javascripts_dir = "/clement/js"
+images_dir = "/clement/htdocs/img"
+javascripts_dir = "/clement/htdocs/js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 output_style = :compressed

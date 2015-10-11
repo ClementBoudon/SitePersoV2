@@ -3,9 +3,9 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    compass: {                  
-      all: {                   
-        options: {              
+    compass: {
+      all: {
+        options: {
           config: 'config.rb'
         }
       }
@@ -19,8 +19,8 @@ module.exports = function(grunt) {
     processhtml: {
       all: {
         files: {
-          'clement/index.html': ['src/html/index.html'],
-          'clement/cv.html': ['src/html/cv.html']
+          'clement/htdocs/index.html': ['src/html/index.html'],
+          'clement/htdocs/cv.html': ['src/html/cv.html']
         }
       }
     },
