@@ -67,7 +67,7 @@ ul.niv1 li:hover .niv2{
 	opacity:0;
 	/* height: 0; */
 	@include transition(visibility 0s linear 0.5s, opacity 0.5s linear);
-	margin-top: 4%;	
+	margin-top: 4%;
 }
 ul.niv2 li{
 	width: 100%;

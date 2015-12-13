@@ -4,7 +4,7 @@ Responsive
 @import "base";
 
 @media screen and (max-width: 1024px) {
-	
+
 	#resume {
 			width: 70%;
 			font-size: 1.15em;
@@ -12,26 +12,26 @@ Responsive
 		}
 		/* passage de l'xp sous descriptif */
 	.experience .description{
-		
+
 		width: 90%;
 			padding: 2% 0 2% 0;
 	}
 
 	.experience ul.competence {
 		width: 90%;
-			
+
 			padding: 0 0 2% 0;
 	}
-	
-	
-	
+
+
+
 
 }
 @media screen and (max-width: 640px) {
 	body{
 		font-size: 12px;
 	}
-	
+
 	#resume {
 		width: 80%;
 		font-size: 1.1em;
@@ -41,11 +41,11 @@ Responsive
 		width: 90%;
 		padding-top: 5%;
 	}
-	
+
 	.contenu {
 		padding-top: 0;
-	}	
-	
+	}
+
 	.formation{
 		padding-top: 5%;
 	}
@@ -75,12 +75,13 @@ Responsive
 		height: 1.5em;
 	}
 	ul.niv2{
-		//height: 0; /*Car utilisation de visibility*/
+		//height: 1; /*Car utilisation de visibility*/
 		//@include transition(visibility 0s linear 0s, opacity 0s linear);
+
 	}
 	ul.niv1 li .niv2{
 		//height: auto;
-	    width: 300%;
+	    width: 100%;
 	    padding-top: 20%;
 	    font-size: 1.2em;
 	    z-index: 1;
@@ -90,18 +91,22 @@ Responsive
 	ul.niv1 li:hover .niv2{
 		z-index: 999;
 		height: auto;
-	}
 
+	}
+	ul.niv1 li #niv2_contact{
+		position: relative;
+		left: 100%;
+	}
 	ul.niv1 li #niv2_pro{
 		position: relative;
-		left: -100%;
+		left: 0px;
 	}
 	ul.niv1 li #niv2_perso{
 		position: relative;
-		left: -200%;
+		left: -100%;
 	}
 	ul.niv2 li{
-		margin-bottom: 5%;
+		margin-bottom: 10%;
 		font-size: 1em;;
 	}
 	/* Pour la page CV on reste avec un menu inline */
@@ -116,5 +121,9 @@ Responsive
 	.contenu {
   		width: 92%;
   		margin: 10% 2%;
+  	}
+
+  	ul.niv1 li:hover .niv2 li{
+  		height: auto;
   	}
 }
